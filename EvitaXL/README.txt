@@ -6,8 +6,6 @@ DataSample.h - Contains the definition and implementation of the DataSample clas
 
 EvitaXL.cpp - Contains an implementation of the EvitaXL class defined in EvitaXL.h, along with a main method which creates an EvitaXL object and allows it to continuously communicate with the ventilator and log the data it collects.
 
-EvitaFail.cpp - Contains an alternate implementation of the EvitaXL class defined in EvitaXL.h which is intended to crash the ventilator. A main method similar to the one found in EvitaXL.cpp creates an EvitaXL object, and allows it to repeatedly crash the ventilator.
-
 rs232.h - Part of the freeware used by the two implementations of the EvitaXL class listed above to communicate with the ventilator.  The source code was written by Teunis van Beelen and is available at http://www.teuniz.net/RS-232/.  The code was tested with GCC on linux and MinGW on Windows XP/2000.  The software is distributed under the GNU General Public License (GPL), which is available at http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt. The file contains several method definitions intended for use in serial communication.
 
 rs232.c - Part of the freeware used by the two implementations of the EvitaXL class listed above to communicate with the ventilator.  The source code was written by Teunis van Beelen and is available at http://www.teuniz.net/RS-232/.  The code was tested with GCC on linux and MinGW on Windows XP/2000.  The software is distributed under the GNU General Public License (GPL), which is available at http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt. The file contains the implementation of the methods defined in rs232.h.
