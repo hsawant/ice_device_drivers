@@ -10,7 +10,7 @@ rs232.h - Part of the freeware used by the two implementations of the EvitaXL cl
 
 rs232.c - Part of the freeware used by the two implementations of the EvitaXL class listed above to communicate with the ventilator.  The source code was written by Teunis van Beelen and is available at http://www.teuniz.net/RS-232/.  The code was tested with GCC on linux and MinGW on Windows XP/2000.  The software is distributed under the GNU General Public License (GPL), which is available at http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt. The file contains the implementation of the methods defined in rs232.h.
 
-evitaXL_log - All data collected from an EvitaXL object is logged to a table in this file, which is organized by time.  In order for the table to be formatted properly, the file should be viewed in a text editor, outside of the terminal, with text wrapping disabled. The contents of this file are overwritten each time the code in EvitaXL.cpp or EvitaFail.cpp is executed. If this file is deleted, the software will simply create a new file with the same name. 
+evitaXL_log - All data collected from an EvitaXL object is logged to a table in this file, which is organized by time.  In order for the table to be formatted properly, the file should be viewed in a text editor, outside of the terminal, with text wrapping disabled. The contents of this file are overwritten each time the code in EvitaXL.cpp is executed. If this file is deleted, the software will simply create a new file with the same name. 
 
 
 
@@ -21,15 +21,13 @@ This software is intended for use on a Linux system. In its current state, the s
 
 To create an executable file called EXEC_NAME from the source code in EvitaXL.cpp, run the command: g++ EvitaXL.cpp -o EXEC_NAME
 
-Likewise, to generate an executable file called EXEC_NAME from the source code in EvitaFail.cpp, run the command: g++ EvitaFail.cpp -o EXEC_NAME
-
 In the above examples, EXEC_NAME can be replaced with any valid file name the user wishes to give the executable.
 
-In order to run an executable file created from EvitaXL.cpp or EvitaFail.cpp, the user must have administrative privileges. Otherwise, the software will not be granted access to the serial port. The simplest way to obtain administrative privileges is to enter the super user command: su
+In order to run an executable file created from EvitaXL.cpp, the user must have administrative privileges. Otherwise, the software will not be granted access to the serial port. The simplest way to obtain administrative privileges is to enter the super user command: su
 
 The user will then be prompted for the root password before being granted administrative privileges.
 
-In order to run an executable file created from EvitaXL.cpp or EvitaFail.cpp, the user must enter the following command, where EXEC_NAME is the name given to the executable file and PORT_NAME is the port that the ventilator is connected to (for example, /dev/ttyS1): ./EXEC_NAME PORT_NAME
+In order to run an executable file created from EvitaXL.cpp, the user must enter the following command, where EXEC_NAME is the name given to the executable file and PORT_NAME is the port that the ventilator is connected to (for example, /dev/ttyS1): ./EXEC_NAME PORT_NAME
 
 If no PORT_NAME argument is supplied, the software will default to /dev/ttyS0.
 
@@ -60,7 +58,7 @@ NOTE: In order for the software to communicate properly with the EvitaXL ventila
 
 TO-DO:
 
-The method isValidIncomingMessage() defined in EvitaXL.h has not been implemented in either EvitaXL.cpp or EvitaFail.cpp.  This method was intended to be used to determine whether or not a received "slow" message is well-structured and contains the correct checksum.
+The method isValidIncomingMessage() defined in EvitaXL.h has not been implemented in either EvitaXL.cpp.  This method was intended to be used to determine whether or not a received "slow" message is well-structured and contains the correct checksum.
 
 Incorporate functionality which allows users to set the sample rate (every sample, every other, every 3rd, etc.) they would like for each particular realtime data value that they are collecting.
 
